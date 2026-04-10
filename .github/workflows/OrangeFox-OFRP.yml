@@ -19,7 +19,7 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree'
         required: true
-        default: 'https://github.com/oliplusmzr/recovery_device_samsung_a24'
+        default: 'https://github.com/Mihan3000/ofrp_device_xiaomi_marble.git'
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.TEST }}
     permissions:
       contents: write
     steps:
@@ -83,8 +83,8 @@ jobs:
       run: |
         mkdir -p ${GITHUB_WORKSPACE}/OrangeFox
         cd ${GITHUB_WORKSPACE}/OrangeFox
-        git config --global user.name "lazycodebuilder"
-        git config --global user.email "154446636+lazycodebuilder@users.noreply.github.com"
+        git config --global user.name "Mihan3000"
+        git config --global user.email "mihan4758@gmail.com"
         git clone https://gitlab.com/OrangeFox/sync.git
         if [ ${{ inputs.MANIFEST_BRANCH }} == '11.0' ] || [ ${{ inputs.MANIFEST_BRANCH }} == '12.1' ]; then
             echo "Sync fox_${{ inputs.MANIFEST_BRANCH }} branch"
