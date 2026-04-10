@@ -23,7 +23,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'Custom Recovery Tree Branch'
         required: true
-        default: 'OFOX'
+        default: 'fox_12.1'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
