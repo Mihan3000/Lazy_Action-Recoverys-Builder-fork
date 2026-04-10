@@ -24,6 +24,14 @@ on:
         description: 'Custom Recovery Tree Branch'
         required: true
         default: 'fox_12.1'
+      DEVICE_PATH:
+        description: 'DEVICE_PATH'
+        required: true
+        default: 'device/xiaomi/marble'
+      DEVICE_NAME:
+        description: 'DEVICE_NAME'
+        required: true
+        default: 'marble'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
