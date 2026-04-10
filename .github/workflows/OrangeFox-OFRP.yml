@@ -86,7 +86,7 @@ jobs:
         git config --global user.name "Mihan3000"
         git config --global user.email "mihan4758@gmail.com"
         git clone https://gitlab.com/OrangeFox/sync.git
-        if [ ${{ inputs.MANIFEST_BRANCH }} == '11.0' ] || [ ${{ inputs.MANIFEST_BRANCH }} == '12.1' ]; then
+        if  [ ${{ inputs.MANIFEST_BRANCH }} == '12.1' ]; then
             echo "Sync fox_${{ inputs.MANIFEST_BRANCH }} branch"
             echo "CHECK_LEGACY_BRANCH=false" >> $GITHUB_ENV
             cd sync
